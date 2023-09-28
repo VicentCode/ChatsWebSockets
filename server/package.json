@@ -1,0 +1,17 @@
+{
+  "name": "sockets",
+  "version": "1.0.0",
+  "description": "chat c/s",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run start"
+  },
+  "keywords": [
+    "chat",
+    "socket",
+    "node",
+    "app"
+  ],
+  "author": "VicentCode",
+  "license": "ISC"
+}
