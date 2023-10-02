@@ -3,34 +3,34 @@ const readline = require('readline-sync');
 const express = require('express');
 const router = express.Router();
 
-
 const servidor={
-    port:4000,
+    port:3000,
     host: 'localhost'
 }
 
 const client = net.createConnection(servidor);
 
 client.on('connect',()=>{
-    console.log('Cliente conectado');
-    sendLine();
+    console.log('conexión satisfactoria')
+    sendLine()
 })
 
-
 client.on('data',(data)=>{
-    console.log('el server dice '+data.toString());
-    sendLine();
+    console.log('El servidor dice: '+ data)
+    sendLine()
 })
 
 client.on('error',(err)=>{
-    console.log(err.message);
+    console.log(err.message)
 })
 
 function sendLine(){
-    let line = readline.question('Ingrese una linea:');
+    var line = readline.question('\n ingresa un mensaje \n')
     if(line==0){
-        client.end();
+        client.end()
     }else{
-        client.write(line);
+        client.write(line)
     }
 }
+
+

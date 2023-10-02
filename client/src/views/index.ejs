@@ -19,13 +19,14 @@
         <!-- form -->
         <div class="container">
             <div class="col-md-9">
-                <form action="/add" method="post">   
+                <form action="/send" method="post">   
                 <div class="card">
                     
-                    <textarea disabled class="form-control" id="exampleFormControlTextarea1" rows="20"></textarea>
-                    <input type="text" class="form-control" placeholder="Nombre">
-                    <button type="button" class="btn btn-primary">Enviar</button>
+                    <textarea disabled class="form-control" id="textHolder" rows="20"><%= mensaje %></textarea>
+                    <input type="text" id="mensaje" name="mensaje" class="form-control" placeholder="Mensaje" aria-label="Mensaje" aria-describedby="button-addon2">
+                    <button class="btn btn-primary">Enviar</button>
                 </div>
+                
             </form>
             </div>
         </div>
